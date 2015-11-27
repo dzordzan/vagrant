@@ -154,39 +154,6 @@ apache:
                             custom_fragment: ''
                             provider: filesmatch
                     provider: directory
-        av_adminer:
-            servername: adminer.loc
-            docroot: /var/www/html/adminer
-            port: '80'
-            setenv:
-                - 'APP_ENV dev'
-            custom_fragment: ''
-            ssl: '0'
-            ssl_cert: ''
-            ssl_key: ''
-            ssl_chain: ''
-            ssl_certs_dir: ''
-            ssl_protocol: ''
-            ssl_cipher: ''
-            directories:
-                avd_0aohvvbu9mk9:
-                    path: /var/www/html/adminer
-                    options:
-                        - Indexes
-                        - FollowSymlinks
-                        - MultiViews
-                    allow_override:
-                        - All
-                    require:
-                        - 'all granted'
-                    custom_fragment: ''
-                    files_match:
-                        avdfm_6c4v3jgfufw0:
-                            path: \.php$
-                            sethandler: 'proxy:fcgi://127.0.0.1:9000'
-                            custom_fragment: ''
-                            provider: filesmatch
-                    provider: directory
 php:
     install: '1'
     settings:
